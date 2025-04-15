@@ -7,11 +7,8 @@ import { router } from "@/router/index"
 //pinia
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
-// vant
-import { Button } from 'vant';
-import 'vant/lib/index.css';
 
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
 
-createApp(App).use(router).use(pinia).use(Button).mount('#app')
+createApp(App).use(pinia).use(router).mount('#app')

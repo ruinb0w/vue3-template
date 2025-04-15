@@ -27,10 +27,12 @@ project
 ├── src
 |   ├── assets/
 |   |   ├── fonts/
+|   |   ├── styles/
 |   |   └── imgs/
 |   ├── components/                   # Put reusable components here
 |   |   └── AppHeader/
 |   |       ├── AppHeader.vue
+|   |       ├── type.d.ts
 |   |       ├── lib.ts                # Functions used only by HomePage
 |   |       └── hook.ts               # Hooks used only by AppHeader
 |   ├── constants/                    # Put constants here
@@ -38,18 +40,19 @@ project
 |   ├── plugins/                      # Contains plugins for vue plugin system
 |   ├── libs/                         # Contains only reusable functions, no state, you can add more files here if needed
 |   |   ├── common.ts                 # Some common used functions, like debouce, throttle, etc.
-|   |   ├── fomatter.ts               # Some common used format functions, like formatDate, formatNumber, etc.
+|   |   ├── formatter.ts              # Some common used format functions, like formatDate, formatNumber, etc.
 |   |   ├── request.ts                # Some common used request functions, like get, post, etc.
-|   |   ├── config.ts                 # Some common used config, like get config from config.json, etc.
 |   |   └── apis/                     # Contains api functions, slipted by modules, based on api url
 |   |       └── user.ts
 |   ├── hooks/                        # Contains state and methods, all hook instances are independent
 |   |   └── order/
 |   |       ├── order.ts
+|   |       ├── type.d.ts
 |   |       └── lib.ts
 |   ├── store/                        # Contains state and methods, all instances share the same state, use pinia to manage state
 |   |   └── userStore/
 |   |       ├── userStore.ts
+|   |       ├── type.d.ts
 |   |       └── lib.ts
 |   ├── router/                       # Contains state and methods, all instances share the same state
 |   |   └── index.ts                  # Main router file
@@ -61,7 +64,7 @@ project
 |   |       ├── hook.ts               # Hooks used only by HomePage
 |   |       └── components/           # Components used only by HomePage
 |   ├── types                         # Put reusable types here
-|   |   └── user.d.ts
+|   |   └── global.d.ts
 |   ├── App.ts
 |   ├── style.scss
 |   └── main.ts
@@ -96,3 +99,7 @@ Use `public/config.json` as the single source of configuration
 ### websocket
 
 The WebSocket implementation is located in `store/wsStore/wsStore.ts`. Make sure it shares the same state with other hook instances.verview.html#project-setup).
+
+### package manager
+
+Use yarn as package manager, make sure yarn.lock is working great, server side will build project via yarn.
