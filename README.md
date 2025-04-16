@@ -90,6 +90,8 @@ Use `lightweight-charts` as the chart library
 Use `vant4` as the mobile UI library
 Use `element-plus` as the admin UI library
 
+> The project employs a tree-shaking mechanism for the UI library. You are free to use the UI library, but it is not recommended to mix them.
+
 ### configuration
 
 Use `public/config.json` as the single source of configuration

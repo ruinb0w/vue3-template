@@ -9,14 +9,13 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AppVersion: typeof import('./src/components/AppVersion/AppVersion.vue')['default']
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElCard: typeof import('element-plus/es')['ElCard']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SimpleClock: typeof import('./src/components/SimpleClock/SimpleClock.vue')['default']
     SimpleCounter: typeof import('./src/components/SimpleCounter/SimpleCounter.vue')['default']
     UserInfo: typeof import('./src/components/UserInfo/UserInfo.vue')['default']
     VanButton: typeof import('vant/es')['Button']
-    VanCol: typeof import('vant/es')['Col']
     VanField: typeof import('vant/es')['Field']
-    VanRow: typeof import('vant/es')['Row']
   }
 }
