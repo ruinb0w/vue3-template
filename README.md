@@ -103,3 +103,24 @@ The WebSocket implementation is located in `store/wsStore/wsStore.ts`. Make sure
 ### package manager
 
 Use yarn as package manager, make sure yarn.lock is working great, server side will build project via yarn.
+
+### Code Size Guidelines  
+
+**Vue Components**  
+- Recommended: ≤200 lines  
+- Hard limit: ≤250 lines  
+- Exceeding: Extract to sub-components or split state/methods  
+
+**Store & Hooks**  
+- Recommended: ≤200 lines  
+- Hard limit: ≤250 lines  
+- Exceeding: Modularize logic into separate methods  
+
+**Libs**
+- Recommended: ≤500 lines  
+- Hard limit: ≤700 lines  
+- Exceeding: Split into separate files
+
+**Functions** 
+- Maximum: 50 lines  
+- Exceeding: Split into smaller functions
