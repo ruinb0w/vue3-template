@@ -94,9 +94,18 @@ Use `element-plus` as the admin UI library
 
 ### configuration
 
-Use `public/config.json` as the single source of configuration
-
 > Note: `config.json` is just a template. The server will replace it with the actual configuration from the server side.
+
+Use `public/config.json` as the single source of configuration. Config should includes:
+```json
+{
+  "BASE_URL": "the url for ponit to the host",
+  "API_URL": "the url for api",
+  "WS_RUL": "the url for webscoket request",
+  "STATIC_URL": "the url for static files, like uploaded img"
+}
+```
+
 
 ### websocket
 
